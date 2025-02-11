@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.navbar {
+    box-shadow: none;
+    width: 45px;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all .4s ease-in-out;
+}
+
+.navbar.active {
+    width: 300px;
+    height: 100vh;
+    box-shadow: 5px 0 15px black;
+    background-color: aliceblue;
+    overflow: visible;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(150, 150, 150);
+    height: 60%;
+    gap: 10px;
+    margin: 10px 10px 0 10px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    padding: 18px 25px;
+    width: 80%;
+    text-align: center;
+    color: #1f1f1f;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-menu a:hover {
+    color: #fff;
+}
+.nav-menu a.active{
+    color: white;
+}
+
+
+.toggle-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all .4s ease;
+}
+
+.toggle-menu {
+    align-self: flex-start;
+    margin: .5rem;
+    padding: 2px;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('kodra2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main h3 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+footer {
+    background-color: rgb(230, 242, 253);
+    color: black;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    padding: 2rem 4rem;
+}
